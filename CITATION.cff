@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use these checks, please cite the software and the accompanying paper."
+type: software
+title: "Exact-arithmetic checks for the GLR conjecture for C4 x C4"
+authors:
+  - given-names: "Raphael"
+    family-names: "Reinauer"
+repository-code: "https://github.com/raphaelreinauer/glr-c4xc4-checks"
+url: "https://github.com/raphaelreinauer/glr-c4xc4-checks"
+abstract: >-
+  Six standalone Python scripts accompanying Appendix A of the paper
+  The Gromov-Lawson-Rosenberg Conjecture for the group Z/4 x Z/4.
+  The scripts check exact eta matrices, Smith forms, Adams spectral-sequence
+  calculations, rational generating-function identities, and mixed
+  spin-index/Gysin computations. They supplement the written proofs;
+  finite-range checks are distinguished from all-parameter identities.
+keywords:
+  - positive scalar curvature
+  - Gromov-Lawson-Rosenberg conjecture
+  - eta invariants
+  - Smith normal form
+  - real connective K-homology

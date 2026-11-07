@@ -1,0 +1,4 @@
+# Tested runtime for the complete suite, including eta --symbolic.
+python-flint==0.9.0
+sympy==1.14.0
+mpmath==1.3.0

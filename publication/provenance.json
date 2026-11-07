@@ -1,0 +1,74 @@
+{
+  "format_version": 1,
+  "hash_algorithm": "SHA-256",
+  "source_package": {
+    "date": "2026-11-06",
+    "archive_filename": "source.zip",
+    "archive_sha256": "1ea883e07f94918aff49e7b7fe248e7bffdae1376fd25702ed640b239dc2066d",
+    "description": "Manuscript source-package export supplied with the paper; the archive itself is not included in this software repository."
+  },
+  "manuscript": {
+    "source_path": "Final_version/final_version.tex",
+    "archived_source_sha256": "4352cbef45ae2fb2f9e2439f9d816006e0086e289db5e8de78ff646f573fd311",
+    "current_source_sha256": "9afb314d8df0028ec0cf31ddf2fe0825caffeec7ee957eacea82cc99206f7a28",
+    "current_source_hash_recorded_on": "2026-11-07",
+    "current_source_identical_to_archived_source": false,
+    "note": "The current manuscript source contains subsequent revisions. These are distinct snapshots; neither manuscript source is included in this software-only repository.",
+    "title": "The Gromov-Lawson-Rosenberg Conjecture for the group Z/4 x Z/4",
+    "paper_authors": [
+      "Noé Bárcenas",
+      "Luis Eduardo García-Hernández",
+      "Raphael Reinauer"
+    ],
+    "software_authorship": "Raphael Reinauer confirmed on 2026-11-07 that he is the sole software author; paper authorship is recorded separately."
+  },
+  "extraction": {
+    "prepared_on": "2026-11-07",
+    "scope": "Only the six verification scripts listed in Appendix A.",
+    "mathematical_code_changed": false,
+    "scripts": [
+      {
+        "source_path": "Final_version/checks/check_E3_rational_identities.py",
+        "repository_path": "checks/check_E3_rational_identities.py",
+        "source_sha256": "b493bdf0e638e44c6bedfef28dbfbac7a6f719dbc84d2cf502d3da22a14dff76",
+        "repository_sha256": "b493bdf0e638e44c6bedfef28dbfbac7a6f719dbc84d2cf502d3da22a14dff76",
+        "modification": "None; byte-identical."
+      },
+      {
+        "source_path": "Final_version/checks/check_ku_d3_symmetry.py",
+        "repository_path": "checks/check_ku_d3_symmetry.py",
+        "source_sha256": "84a68599d1cb675ed425db748dd5378a0c2ffc2fb13655db2f5e32e788995f97",
+        "repository_sha256": "84a68599d1cb675ed425db748dd5378a0c2ffc2fb13655db2f5e32e788995f97",
+        "modification": "None; byte-identical."
+      },
+      {
+        "source_path": "Final_version/checks/check_mixed_geometry_spin_indices.py",
+        "repository_path": "checks/check_mixed_geometry_spin_indices.py",
+        "source_sha256": "ea21a6793def332be8781b09b0ed98a5f41deb819b206ec081cb3b2a1f8c9498",
+        "repository_sha256": "ea21a6793def332be8781b09b0ed98a5f41deb819b206ec081cb3b2a1f8c9498",
+        "modification": "None; byte-identical."
+      },
+      {
+        "source_path": "Final_version/checks/check_mixed_spin_index.py",
+        "repository_path": "checks/check_mixed_spin_index.py",
+        "source_sha256": "d5921be83c2165d58409d09827a954b3b934c1bbd335d180c2f2c7998a63de2c",
+        "repository_sha256": "d5921be83c2165d58409d09827a954b3b934c1bbd335d180c2f2c7998a63de2c",
+        "modification": "None; byte-identical."
+      },
+      {
+        "source_path": "Final_version/checks/check_real_e3_and_d3_lower_bounds.py",
+        "repository_path": "checks/check_real_e3_and_d3_lower_bounds.py",
+        "source_sha256": "0cb3315a5b0919ff98b319d3834102253a031c4820b203c35e3925e8295bde9e",
+        "repository_sha256": "0cb3315a5b0919ff98b319d3834102253a031c4820b203c35e3925e8295bde9e",
+        "modification": "None; byte-identical."
+      },
+      {
+        "source_path": "Final_version/checks/eta_matrix_repair.py",
+        "repository_path": "checks/eta_matrix_repair.py",
+        "source_sha256": "47dfd8322408cab1d73cae941c5822c3da58533a9029aa7001d9595055bde346",
+        "repository_sha256": "cae3963c116e2003ecfee1cb1df5dcef9b21f784d69fe680e53dbd16b4a400a2",
+        "modification": "Docstring lines 4-5 only: replaced a machine-local interpreter instruction with a portable README reference and the --symbolic option. No executable code changed."
+      }
+    ]
+  }
+}

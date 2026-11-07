@@ -1,0 +1,85 @@
+Python 3.12.13
+python-flint 0.9.0
+sympy 1.14.0
+mpmath 1.3.0
+
+=== checks/eta_matrix_repair.py --symbolic ===
+L3 all-one: (Fraction(0, 1), Fraction(3, 8), Fraction(1, 2), Fraction(3, 8))
+L3 one-three: (Fraction(0, 1), Fraction(1, 8), Fraction(1, 2), Fraction(1, 8))
+n=3: q=2, Smith=(1, 1, 2, 4, 4, 8, 8, 8, 8), image factors=(8, 8, 4, 2, 2, 1, 1, 1, 1), log2=10
+n=7: q=3, Smith=(1, 1, 2, 16, 16, 16, 16, 16, 32), image factors=(32, 32, 16, 2, 2, 2, 2, 2, 1), log2=19
+n=11: q=4, Smith=(1, 1, 2, 16, 16, 32, 32, 32, 32), image factors=(128, 128, 64, 8, 8, 4, 4, 4, 4), log2=34
+n=15: q=5, Smith=(1, 1, 2, 64, 64, 64, 64, 64, 128), image factors=(512, 512, 256, 8, 8, 8, 8, 8, 4), log2=43
+n=19: q=6, Smith=(1, 1, 2, 64, 64, 128, 128, 128, 128), image factors=(2048, 2048, 1024, 32, 32, 16, 16, 16, 16), log2=58
+n=23: q=7, Smith=(1, 1, 2, 256, 256, 256, 256, 256, 512), image factors=(8192, 8192, 4096, 32, 32, 32, 32, 32, 16), log2=67
+All exact geometric lens table and Smith checks passed through d=20.
+Constant six-slope bundle matrix Smith diagonal: (1, 1, 2, 2, 4, 4)
+mixed periods: True
+pivot swaps (0-based k,row,column): [(0, 0, 0), (1, 2, 2), (2, 3, 8), (3, 3, 3), (4, 6, 7), (5, 5, 5), (6, 6, 6), (7, 7, 9), (8, 8, 10)]
+symbolic pivots: [a + 1, a + 1, 2, 2*a/(a + 1), -2*a, 2*a*(a + 2), -8*a/(a + 2), 4*a/(a + 1), 4*a]
+unique elimination multipliers: ['(a - 1)/(a + 1)', '-(a + 2)/2', '-(a - 1)/(a + 1)', '-(a**2 + 1)/(a + 1)', '-1', '-1/(a + 1)', '-2*(a + 1)', '-2*a', '-a', '-a - 1', '-a - 2', '-a*(a - 1)/(a + 1)', '-a/((a + 1)*(a + 2))', '-a/(a + 1)', '-a/2', '1', '1 - a', '1/(a + 1)', '2*a/(a + 1)', '2/(a + 2)', 'a', 'a + 1', 'a/((a + 1)*(a + 2))', 'a/(2*(a + 1))', 'a/(a + 1)', 'a/(a + 2)', 'a/2']
+Universal 2-local diagonalization certified for every positive a divisible by four.
+mixed periods: False
+pivot swaps (0-based k,row,column): [(0, 0, 0), (1, 2, 2), (2, 3, 8), (3, 3, 3), (4, 4, 6), (5, 5, 5), (6, 6, 7), (7, 7, 9), (8, 8, 10)]
+symbolic pivots: [a + 1, a + 1, 2, 4*a/(a + 1), 2*a*(a - 2), -8*a/(a - 2), -4*a, 4*a/(a + 1), 8*a]
+unique elimination multipliers: ['(a - 1)/(a + 1)', '-(a + 2)/2', '-(a - 1)/(a + 1)', '-(a**2 + 1)/(a + 1)', '-(a**2 + 2*a + 2)/(2*(a + 1))', '-1', '-1/(a + 1)', '-2*a', '-2*a/((a - 2)*(a + 1))', '-2*a/(a + 1)', '-a', '-a - 1', '-a*(a + 2)/(2*(a + 1))', '-a*(a - 1)/(a + 1)', '-a**2/(2*(a + 1))', '-a/(a - 2)', '-a/2', '1', '1 - a', '2', '2*a', '2*a**2/((a - 2)*(a + 1))', '2*a/(a + 1)', '2/(a - 2)', 'a', 'a + 1', 'a*(a + 2)/(2*(a + 1))', 'a*(a - 1)/((a - 2)*(a + 1))', 'a/(2*(a + 1))', 'a/(a - 2)']
+Universal 2-local diagonalization certified for every positive a divisible by four.
+
+=== checks/check_ku_d3_symmetry.py  ===
+Invariant functionals killing cyclic axis classes and vPhi5:
+(0, 0, 0, 0, 0)
+(0, 1, 0, 1, 0)
+Count: 2
+PASS: source dimensions (11,0)=3, (11,1)=10; target (10,4)=1.
+PASS: primitive symmetry uniquely selects the nonzero functional.
+
+=== checks/check_real_e3_and_d3_lower_bounds.py  ===
+n= 2: realE3bits=  2; exhibitedR3d3-rank=  0
+n= 3: realE3bits=  3; exhibitedR3d3-rank=  0
+n= 4: realE3bits=  5; exhibitedR3d3-rank=  0
+n= 5: realE3bits=  3; exhibitedR3d3-rank=  0
+n= 6: realE3bits=  5; exhibitedR3d3-rank=  0
+n= 7: realE3bits=  7; exhibitedR3d3-rank=  0
+n= 8: realE3bits=  9; exhibitedR3d3-rank=  0
+n= 9: realE3bits=  7; exhibitedR3d3-rank=  0
+n=10: realE3bits= 12; exhibitedR3d3-rank=  0
+n=11: realE3bits= 15; exhibitedR3d3-rank=  1
+n=12: realE3bits= 17; exhibitedR3d3-rank=  0
+n=13: realE3bits= 13; exhibitedR3d3-rank=  3
+n=14: realE3bits= 19; exhibitedR3d3-rank=  0
+n=15: realE3bits= 23; exhibitedR3d3-rank=  4
+n=16: realE3bits= 25; exhibitedR3d3-rank=  0
+n=17: realE3bits= 21; exhibitedR3d3-rank=  6
+n=18: realE3bits= 30; exhibitedR3d3-rank=  0
+n=19: realE3bits= 35; exhibitedR3d3-rank=  9
+n=20: realE3bits= 37; exhibitedR3d3-rank=  0
+n=21: realE3bits= 31; exhibitedR3d3-rank= 13
+n=22: realE3bits= 41; exhibitedR3d3-rank=  0
+n=23: realE3bits= 47; exhibitedR3d3-rank= 16
+n=24: realE3bits= 49; exhibitedR3d3-rank=  0
+n=25: realE3bits= 43; exhibitedR3d3-rank= 20
+n=26: realE3bits= 56; exhibitedR3d3-rank=  0
+n=27: realE3bits= 63; exhibitedR3d3-rank= 25
+n=28: realE3bits= 65; exhibitedR3d3-rank=  0
+n=29: realE3bits= 57; exhibitedR3d3-rank= 31
+n=30: realE3bits= 71; exhibitedR3d3-rank=  0
+n=31: realE3bits= 79; exhibitedR3d3-rank= 36
+PASS: actual R2/d2 construction; d2 squared zero; exhibited ranks equal rho through stem31.
+
+=== checks/check_E3_rational_identities.py  ===
+PASS: exact cancellation of 1-y and symbolic specialization equals V(t).
+PASS: exact rational identity gives all eight quadratic formulas for every d>=1.
+
+=== checks/check_mixed_spin_index.py  ===
+PASS: integral spin-index diagonals, forced h0 corrections,
+and full first-row rank N+1 for every N=2,...,64.
+
+=== checks/check_mixed_geometry_spin_indices.py  ===
+N=1, dimension=6: ku ambient 9 bits, geometric image 4 bits
+N=2, dimension=10: ku ambient 19 bits, geometric image 10 bits
+N=3, dimension=14: ku ambient 29 bits, geometric image 15 bits
+N=4, dimension=18: ku ambient 39 bits, geometric image 20 bits
+N=5, dimension=22: ku ambient 49 bits, geometric image 25 bits
+PASS: actual spin-index/Gysin images attain the expected complex kernel size through dimension22.
+
+PASS: all six scripts completed; symbolic eta certificate included.

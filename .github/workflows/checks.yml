@@ -1,0 +1,29 @@
+name: Exact-arithmetic checks
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.13'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python run_checks.py
+      - name: Verify optimization is rejected
+        run: |
+          if python -O run_checks.py; then
+            echo 'ERROR: optimized interpreter was accepted'
+            exit 1
+          fi
+          if PYTHONOPTIMIZE=1 python run_checks.py; then
+            echo 'ERROR: PYTHONOPTIMIZE was accepted'
+            exit 1
+          fi
