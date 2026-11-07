@@ -10,7 +10,7 @@
   "manuscript": {
     "source_path": "Final_version/final_version.tex",
     "archived_source_sha256": "4352cbef45ae2fb2f9e2439f9d816006e0086e289db5e8de78ff646f573fd311",
-    "current_source_sha256": "9afb314d8df0028ec0cf31ddf2fe0825caffeec7ee957eacea82cc99206f7a28",
+    "current_source_sha256": "d4c5f0188ac780a73b15c1128bee5c31fa83f65c23db8357fd8717572fac28cd",
     "current_source_hash_recorded_on": "2026-11-07",
     "current_source_identical_to_archived_source": false,
     "note": "The current manuscript source contains subsequent revisions. These are distinct snapshots; neither manuscript source is included in this software-only repository.",
@@ -25,6 +25,7 @@
   "extraction": {
     "prepared_on": "2026-11-07",
     "scope": "Only the six verification scripts listed in Appendix A.",
+    "source_reference": "Each source_path and source_sha256 identifies an original archive member. Where present, current_source_path and current_source_sha256 identify the corresponding file in the current manuscript source.",
     "mathematical_code_changed": false,
     "scripts": [
       {
@@ -64,10 +65,12 @@
       },
       {
         "source_path": "Final_version/checks/eta_matrix_repair.py",
-        "repository_path": "checks/eta_matrix_repair.py",
+        "current_source_path": "Final_version/checks/eta_matrix_checks.py",
+        "repository_path": "checks/eta_matrix_checks.py",
         "source_sha256": "47dfd8322408cab1d73cae941c5822c3da58533a9029aa7001d9595055bde346",
-        "repository_sha256": "cae3963c116e2003ecfee1cb1df5dcef9b21f784d69fe680e53dbd16b4a400a2",
-        "modification": "Docstring lines 4-5 only: replaced a machine-local interpreter instruction with a portable README reference and the --symbolic option. No executable code changed."
+        "current_source_sha256": "3696dcc383ceccd08159e32b2ce34fd15e9859e32d1fc5f9414156f7d3420e2b",
+        "repository_sha256": "3696dcc383ceccd08159e32b2ce34fd15e9859e32d1fc5f9414156f7d3420e2b",
+        "modification": "Renamed to eta_matrix_checks.py in the repository and current manuscript source. Only the module docstring was updated, using neutral verification wording and portable README/--symbolic instructions. No executable code changed."
       }
     ]
   }

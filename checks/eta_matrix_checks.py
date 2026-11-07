@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact eta repair research. No arbitrary BGS normalization is inserted.
+"""Exact-arithmetic verification of eta matrices and their Smith forms.
 
 See README.md for installation and execution instructions. The optional
 symbolic audit uses SymPy and is enabled with `--symbolic`.

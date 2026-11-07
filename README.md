@@ -9,9 +9,10 @@ proofs. In particular, finite-range checks do not establish all-degree
 statements. The geometric interpretation of the matrices and the nonzero
 spectral-sequence differential are inputs from the paper.
 
-This repository is being prepared for its first release. The software author
-is Raphael Reinauer. The license still needs confirmation. No Zenodo DOI has
-been issued for this package, and no public release is claimed here.
+The software author is Raphael Reinauer. The code and accompanying
+documentation are available under the [MIT License](LICENSE).
+
+This software is a personal project by Raphael Reinauer.
 
 ## Run the checks
 
@@ -45,7 +46,7 @@ To omit only the symbolic eta certificate:
 Every script can also be run separately, for example:
 
 ```sh
-.venv/bin/python checks/eta_matrix_repair.py --symbolic
+.venv/bin/python checks/eta_matrix_checks.py --symbolic
 .venv/bin/python checks/check_mixed_geometry_spin_indices.py
 ```
 
@@ -63,7 +64,7 @@ match Appendix A.
 
 | Script in `checks/` | Paper | Scope |
 | --- | --- | --- |
-| `eta_matrix_repair.py` | §6.2 | Exact fixed-point sums for even m = 2,...,40; Smith calculations for d = 0,...,20; constant six-slope bundle matrix. With `--symbolic`, a universal 2-local diagonalization for every positive a divisible by four. |
+| `eta_matrix_checks.py` | §6.2 | Exact fixed-point sums for even m = 2,...,40; Smith calculations for d = 0,...,20; constant six-slope bundle matrix. With `--symbolic`, a universal 2-local diagonalization for every positive a divisible by four. |
 | `check_ku_d3_symmetry.py` | §5.3 | A finite primitive source/target calculation and exhaustive symmetry test. This selects the unique nonzero invariant functional; it does not establish that the actual differential is nonzero. |
 | `check_real_e3_and_d3_lower_bounds.py` | §§5.2, 5.4–5.5 | The actual R2/d2 construction, d2 squared zero, kernel/image quotients, and exhibited third-differential ranks in stems 2,...,31. |
 | `check_E3_rational_identities.py` | §5.4 | Exact polynomial/rational identities giving the all-degree generating function and the eight quadratic residue formulas. Not finite fitting. |
@@ -77,10 +78,10 @@ remaining three scripts use only the Python standard library.
 ## Provenance and AI assistance
 
 The six checks were extracted from the manuscript's accompanying source
-package. Their mathematical code is unchanged; the eta script's original
-machine-local interpreter instruction was replaced by a reference to this
-README. Source hashes and the extraction manifest are in
-`publication/provenance.json`.
+package. Their mathematical code is unchanged. The eta script was renamed
+to `eta_matrix_checks.py`; its introductory docstring now uses neutral
+verification wording and portable README instructions. Original archive
+names and source hashes are retained in `publication/provenance.json`.
 
 GitHub Copilot was used to assist in developing the verification scripts.
 The repository documentation and test runner were prepared with additional
@@ -94,10 +95,10 @@ The repository is at
 
 Software citation metadata is in `CITATION.cff`. The software author is
 Raphael Reinauer; the accompanying paper has the three authors named above.
-License terms must be confirmed before the first release is published.
-MIT is proposed, but no reuse license has yet been granted.
+The software license is MIT, copyright (c) 2026 Raphael Reinauer.
 
-The release checklist, proposed Zenodo description, and release notes are in
-`publication/RELEASE.md`. The planned first release is `v1.0.0`; this is not
-a published version or an assigned DOI. Once archived, cite the DOI of the
-specific release used, not only the changing GitHub branch.
+Version `1.0.0` has release metadata dated 2026-11-07. Published versions
+are listed on the repository's Releases page. Release and archive instructions
+are in `publication/RELEASE.md`; the `v1.0.0` release notes are in
+`publication/github-release-notes.md`. When a release is archived on Zenodo,
+cite the DOI of that specific version, not only the changing GitHub branch.

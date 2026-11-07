@@ -10,7 +10,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 CHECKS = (
-    "eta_matrix_repair.py",
+    "eta_matrix_checks.py",
     "check_ku_d3_symmetry.py",
     "check_real_e3_and_d3_lower_bounds.py",
     "check_E3_rational_identities.py",
@@ -44,7 +44,7 @@ def main():
     for name in CHECKS:
         relative = Path("checks") / name
         options = ["--symbolic"] if (
-            name == "eta_matrix_repair.py" and not args.skip_symbolic
+            name == "eta_matrix_checks.py" and not args.skip_symbolic
         ) else []
         print(f"\n=== {relative.as_posix()} {' '.join(options)} ===".rstrip(), flush=True)
         try:

@@ -1,58 +1,64 @@
-# First-release preparation
+# Release and archival workflow
 
-The GitHub repository is a private staging repository until the license
-and release metadata are confirmed. No GitHub release or
-Zenodo record has been published. The proposed release is `v1.0.0`.
+Software author: Raphael Reinauer. License: MIT, copyright (c) 2026
+Raphael Reinauer. The `v1.0.0` release metadata is dated 2026-11-07.
+The release candidate is prepared; GitHub release publication and Zenodo
+archiving are pending. Update this status after publication. Metadata alone
+do not establish that a release or archival record exists.
 
-## Decisions before publication
+## Before publishing a release
 
-- [x] Confirm software authors: Raphael Reinauer alone, as confirmed by the
-      author on 2026-11-07. No ORCID ID was supplied.
-- [ ] Confirm a software license and the right to license every included file.
-- [ ] Add the chosen license as `LICENSE`.
-- [x] Add root `CITATION.cff` using confirmed software authorship.
-- [ ] Add the confirmed license, version `1.0.0`, and actual release date
-      to `CITATION.cff` before publication.
-- [x] Validate the preparation `CITATION.cff` with cffconvert 2.0.0 against
-      schema 1.2.0. Revalidate after adding the release license/version/date.
-- [ ] Have the authors review the mathematical scope and AI-use disclosure.
-- [ ] Confirm the final manuscript revision corresponding to the release;
-      the extraction manifest identifies the current source revision.
+1. Confirm the version, release date, author, and license in `CITATION.cff`
+   match the release. Validate it with `cffconvert --validate`.
+2. Create a fresh virtual environment, install `requirements.txt`, and run
+   `python run_checks.py` with assertions enabled. Include the symbolic eta
+   certificate and save the complete output as `verification.txt`.
+3. Check that `python -O run_checks.py` and a `PYTHONOPTIMIZE=1` invocation
+   fail rather than report success.
+4. Check the release contains no credentials, virtual environment, private
+   manuscript material, absolute research paths, or unrelated code. Check
+   the six scripts against `publication/provenance.json`.
+5. Review the README's mathematical scope and AI-use disclosure. Finite-range
+   checks must not be described as proofs in all dimensions.
+6. Commit the tested files and create the version tag at that commit. For
+   the first release, use `v1.0.0` and the notes in
+   `publication/github-release-notes.md`.
 
-Do not put guessed ORCID IDs, an invented DOI, or provisional author credits
-into release metadata. Keep a single metadata source: `CITATION.cff` is
-enough for this release; adding `.zenodo.json` would override it in Zenodo.
+The supplied `verification.txt` records a completed local run. Regenerate
+it if any script or runtime dependency changes. This workflow does not
+assert that the paper's other authors have performed the software checks.
 
-## Verification
-
-- [x] Create a fresh virtual environment and install `requirements.txt`.
-- [x] Run `python run_checks.py` without optimization, including the symbolic
-      eta certificate. Save the complete output as `verification.txt`.
-- [x] Check that `python -O run_checks.py` and a `PYTHONOPTIMIZE=1` invocation
-      both fail instead of reporting success.
-- [x] Check the prepared files contain no virtual environment, credentials,
-      private manuscript material, absolute research paths, or unrelated code.
-- [x] Confirm the six extracted scripts agree with `provenance.json`.
-- [ ] Commit the final state and record its commit hash in the release notes.
-
-The supplied `verification.txt` records the preparation run. It should be
-regenerated if any script or runtime dependency changes.
+Keep citation metadata in `CITATION.cff`. Do not add guessed ORCID IDs or
+an invented DOI. A `.zenodo.json` file would override `CITATION.cff` in
+Zenodo's GitHub integration, so avoid maintaining conflicting metadata.
 
 ## GitHub and Zenodo
 
-1. After the decisions above, make the GitHub repository public.
-2. Sign in to Zenodo and link the GitHub account if needed. In the profile
-   menu choose GitHub, sync repositories, and enable
-   `raphaelreinauer/glr-c4xc4-checks` **before** publishing the GitHub release.
-3. Create the final `v1.0.0` tag at the tested commit and publish a GitHub
-   release using the release-note draft below. Do not move this published tag.
-4. Wait for Zenodo to ingest the release. Check title, creators, license,
-   resource type Software, version, and source archive against the release.
-5. Record the DOI of this specific version. Add it to the paper's software
-   reference and availability statement. A later documentation commit can
-   add it to the README; do not change the archived source/tag to do so.
-6. Future corrections should be new versioned releases, not a replacement
-   of the source already cited by the paper.
+Choose one archival route for each release.
+
+### GitHub integration
+
+1. Make the GitHub repository public. In Zenodo, link the GitHub account,
+   sync repositories, and enable `raphaelreinauer/glr-c4xc4-checks`
+   before publishing the GitHub release.
+2. Publish the release at the tested version tag. Do not move a published tag.
+3. Wait for Zenodo to ingest the release. Check the title, creator, license,
+   resource type Software, version, and archived source against the release.
+
+### Manual archive
+
+If the integration is unavailable, create a Zenodo Software record using
+one ZIP generated from the tested Git tag, not from the working directory.
+Use the same author, MIT license, version, and release date as `CITATION.cff`.
+Check the uploaded archive before publishing the record. Do not also create
+an integration-generated record for the same release.
+
+### After archiving
+
+Record the DOI of the specific version in the paper's software reference
+and availability statement. A later documentation commit can add it to
+the README; do not move the archived tag to do so. Future software corrections
+should use new versioned releases, not replace the source cited by the paper.
 
 Official instructions:
 
@@ -60,12 +66,7 @@ Official instructions:
 - [Archive a GitHub release](https://help.zenodo.org/docs/github/archive-software/github-upload/)
 - [Describe software using CITATION.cff](https://help.zenodo.org/docs/github/describe-software/citation-file/)
 
-If integration is unavailable, a manual Zenodo Software upload is an
-alternative. Generate one ZIP from the final Git tag, not the working
-directory, and upload that single source archive. Do not publish a second
-record for the same release through both routes.
-
-## Proposed Zenodo description
+## Zenodo description
 
 Exact-arithmetic verification scripts accompanying Appendix A of
 *The Gromov–Lawson–Rosenberg Conjecture for the group Z/4 x Z/4*, by
@@ -74,29 +75,15 @@ Noé Bárcenas, Luis Eduardo García-Hernández, and Raphael Reinauer.
 The six standalone Python scripts check eta fixed-point sums and Smith
 normal forms, primitive symmetry and real Adams spectral-sequence
 calculations, exact rational generating-function identities, and mixed
-spin-index/Gysin images. The scripts are supplementary checks, not a
-replacement for the paper's proofs. The README distinguishes finite-range
-calculations from symbolic all-parameter certificates.
+spin-index/Gysin images. They are supplementary checks, not a replacement
+for the paper's proofs. The README distinguishes finite-range calculations
+from symbolic all-parameter certificates.
 
 The package includes pinned dependencies, a runner that requires assertions,
 and an extraction manifest. GitHub Copilot assisted in developing the scripts;
 additional AI assistance was used for the repository documentation and runner.
 
-Resource type: Software. Software creator: Raphael Reinauer.
-Proposed license: MIT, awaiting approval.
-Version: 1.0.0 once released. No DOI has been assigned during preparation.
+Software creator: Raphael Reinauer. License: MIT.
+Version: 1.0.0. Release date: 2026-11-07.
 
-## Proposed GitHub release notes
-
-First release of the six exact-arithmetic checks listed in Appendix A.
-
-- Eta fixed-point sums, actual target periods, Smith forms, and a symbolic
-  universal 2-local diagonalization certificate.
-- Primitive complex symmetry and real E3/third-differential rank checks.
-- Exact rational identities and mixed spin-index/Gysin calculations.
-- Pinned runtime dependencies, execution instructions, and verification output.
-
-These checks support the written proofs. Finite tests are not claimed to
-establish all-degree theorems. See README for the exact scope of each script.
-
-Tested source commit: fill from the final release commit, not this draft.
+This software is a personal project by Raphael Reinauer.
