@@ -87,3 +87,5 @@ Software creator: Raphael Reinauer. License: MIT.
 Version: 1.0.0. Release date: 2026-11-10.
 
 This software is a personal project by Raphael Reinauer.
+
+Copyright (c) 2026 Raphael Reinauer

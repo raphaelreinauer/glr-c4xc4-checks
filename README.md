@@ -14,6 +14,8 @@ documentation are available under the [MIT License](LICENSE).
 
 This software is a personal project by Raphael Reinauer.
 
+Copyright (c) 2026 Raphael Reinauer
+
 ## Run the checks
 
 Python 3.10 or newer is required. The reference environment uses Python

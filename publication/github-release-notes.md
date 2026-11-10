@@ -17,3 +17,5 @@ Software author: Raphael Reinauer. Licensed under the MIT License,
 copyright (c) 2026 Raphael Reinauer.
 
 This software is a personal project by Raphael Reinauer.
+
+Copyright (c) 2026 Raphael Reinauer
