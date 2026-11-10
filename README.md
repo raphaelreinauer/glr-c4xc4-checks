@@ -99,8 +99,16 @@ Software citation metadata is in `CITATION.cff`. The software author is
 Raphael Reinauer; the accompanying paper has the three authors named above.
 The software license is MIT, copyright (c) 2026 Raphael Reinauer.
 
-Version `1.0.0` has release metadata dated 2026-11-10. Published versions
-are listed on the repository's Releases page. Release and archive instructions
-are in `publication/RELEASE.md`; the `v1.0.0` release notes are in
-`publication/github-release-notes.md`. When a release is archived on Zenodo,
-cite the DOI of that specific version, not only the changing GitHub branch.
+Version `v1.0.0` was published on 2026-11-10 and is permanently archived
+on Zenodo: [doi:10.5281/zenodo.24116313](https://doi.org/10.5281/zenodo.24116313).
+The [GitHub release](https://github.com/raphaelreinauer/glr-c4xc4-checks/releases/tag/v1.0.0)
+and archived ZIP contain the same 17 files. Cite this version-specific DOI
+when referring to the checks used with the paper.
+
+> Reinauer, Raphael. (2026). *Exact-arithmetic checks for the GLR conjecture
+> for C4 x C4* (v1.0.0) [Software]. Zenodo.
+> https://doi.org/10.5281/zenodo.24116313
+
+Release and archive details are in `publication/RELEASE.md`; the `v1.0.0`
+release notes are in `publication/github-release-notes.md`. Later documentation
+updates do not change the archived tag or its DOI.

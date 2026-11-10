@@ -2,9 +2,20 @@
 
 Software author: Raphael Reinauer. License: MIT, copyright (c) 2026
 Raphael Reinauer. The `v1.0.0` release metadata is dated 2026-11-10.
-The release candidate is prepared; GitHub release publication and Zenodo
-archiving are pending. Update this status after publication. Metadata alone
-do not establish that a release or archival record exists.
+Version `v1.0.0` was published on GitHub and archived on Zenodo on
+2026-11-10. Both records were checked after publication.
+
+- [GitHub release](https://github.com/raphaelreinauer/glr-c4xc4-checks/releases/tag/v1.0.0)
+- Version-specific DOI: [10.5281/zenodo.24116313](https://doi.org/10.5281/zenodo.24116313)
+- All-version concept DOI: [10.5281/zenodo.24116312](https://doi.org/10.5281/zenodo.24116312)
+- Archived source commit: `8e4e5918b4cb14cb6d70574be46233c7a04f74fb`
+- Archived ZIP SHA-256: `47200ff493780e018b0c420e29775a5ac7d247994daceb341acebddb2e2661bf`
+
+The Zenodo archive was downloaded and all 17 tracked files were compared
+byte for byte with the tagged commit. The six checks and the assertion
+safeguards passed locally, and GitHub Actions passed at the tagged commit.
+Use the version-specific DOI for the paper's software citation. Subsequent
+documentation changes on `main` do not alter the frozen `v1.0.0` tag.
 
 ## Before publishing a release
 
