@@ -1,7 +1,7 @@
 # Release and archival workflow
 
 Software author: Raphael Reinauer. License: MIT, copyright (c) 2026
-Raphael Reinauer. The `v1.0.0` release metadata is dated 2026-11-07.
+Raphael Reinauer. The `v1.0.0` release metadata is dated 2026-11-10.
 The release candidate is prepared; GitHub release publication and Zenodo
 archiving are pending. Update this status after publication. Metadata alone
 do not establish that a release or archival record exists.
@@ -84,6 +84,6 @@ and an extraction manifest. GitHub Copilot assisted in developing the scripts;
 additional AI assistance was used for the repository documentation and runner.
 
 Software creator: Raphael Reinauer. License: MIT.
-Version: 1.0.0. Release date: 2026-11-07.
+Version: 1.0.0. Release date: 2026-11-10.
 
 This software is a personal project by Raphael Reinauer.

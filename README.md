@@ -97,7 +97,7 @@ Software citation metadata is in `CITATION.cff`. The software author is
 Raphael Reinauer; the accompanying paper has the three authors named above.
 The software license is MIT, copyright (c) 2026 Raphael Reinauer.
 
-Version `1.0.0` has release metadata dated 2026-11-07. Published versions
+Version `1.0.0` has release metadata dated 2026-11-10. Published versions
 are listed on the repository's Releases page. Release and archive instructions
 are in `publication/RELEASE.md`; the `v1.0.0` release notes are in
 `publication/github-release-notes.md`. When a release is archived on Zenodo,

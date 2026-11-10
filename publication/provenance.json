@@ -10,8 +10,8 @@
   "manuscript": {
     "source_path": "Final_version/final_version.tex",
     "archived_source_sha256": "4352cbef45ae2fb2f9e2439f9d816006e0086e289db5e8de78ff646f573fd311",
-    "current_source_sha256": "d4c5f0188ac780a73b15c1128bee5c31fa83f65c23db8357fd8717572fac28cd",
-    "current_source_hash_recorded_on": "2026-11-07",
+    "current_source_sha256": "24faa6b55ca995eff2b3989dfd2b13387118ff07e1843ec5ac0fe2151e3f7e97",
+    "current_source_hash_recorded_on": "2026-11-10",
     "current_source_identical_to_archived_source": false,
     "note": "The current manuscript source contains subsequent revisions. These are distinct snapshots; neither manuscript source is included in this software-only repository.",
     "title": "The Gromov-Lawson-Rosenberg Conjecture for the group Z/4 x Z/4",

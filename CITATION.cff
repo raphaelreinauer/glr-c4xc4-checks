@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use these checks, please cite the software and the accompanying paper."
 type: software
 version: "1.0.0"
-date-released: "2026-11-07"
+date-released: "2026-11-10"
 license: "MIT"
 title: "Exact-arithmetic checks for the GLR conjecture for C4 x C4"
 authors:
